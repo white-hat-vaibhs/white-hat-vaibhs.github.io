@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Kaushan Script' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></script>
+<script src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+<script src="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"></script>
+
+
+<style>
+    body,
+    body,
+    html {
+        width: 100%;
+        height: 100%;
+    }
+    
+    body,
+    h1 {
+        font-family: "Kaushan Script";
+        font-weight: 700;
+    }
+    
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+    }
+    
+    .topnav {
+        font-size: 16px;
+        border-bottom: 1px outset rgba(192, 192, 192, 0.5);
+        background: rgba(192, 192, 192, 0.9);
+        box-shadow: 0px 1px rgba(0, 0, 0, 0.3);
+    }
+    
+    .topnav ul.navbar-nav li a {
+        background: rgba(28, 28, 28, 0.1);
+        color: #000;
+    }
+    
+    .topnav ul.navbar-nav li a:hover,
+    .topnav ul.navbar-nav li a:focus {
+        background: rgba(255, 255, 255, 0.5);
+        color: #000;
+    }
+    
+    .topnav .navbar-brand {
+        background: rgba(28, 28, 28, 0.0);
+        color: #000;
+    }
+    
+    .topnav .navbar-brand:hover,
+    .topnav .navbar-brand:focus {
+        background: rgba(255, 255, 255, 0.5);
+        color: #000;
+    }
+    
+    .lead {
+        font-family: calibri;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    /*top background*/
+    
+    .intro-header {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+        background-color: #1c0549;
+        /*background: no-repeat center center fixed;*/
+        background-size: cover;
+        height: 855px;
+    }
+    
+    .bg-overlay {
+        background: rgba(0, 0, 0, 0.3);
+        height: 855px;
+    }
+    
+    .intro-message {
+        position: relative;
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+    /*Big header*/
+    
+    .intro-message>h1 {
+        margin-top: -50px;
+        text-shadow: 2px 1px 2px #000;
+        font-size: 5em;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .intro-divider {
+        width: 400px;
+        border-top: 1px solid #f8f8f8;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    /*small header*/
+    
+    .intro-message>h3 {
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+        color: black;
+    }
+    
+    @media(max-width:767px) {
+        .intro-message {
+            padding-bottom: 15%;
+        }
+        .intro-message>h1 {
+            font-size: 3em;
+        }
+        ul.intro-social-buttons>li {
+            display: block;
+            margin-bottom: 30px;
+            padding: 0;
+        }
+        ul.intro-social-buttons>li:last-child {
+            margin-bottom: 0;
+        }
+        .intro-divider {
+            width: 100%;
+        }
+    }
+    /*line*/
+    
+    hr.intro-divider {
+        border: 1px outset rgba(255, 255, 255, 0.2);
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+        width: 100%;
+    }
+    /* social buttons */
+    
+    .btn {
+        display: inline-block;
+        color: #000;
+        border: 2px outset rgba(0, 0, 0, 0.9);
+        background: #C0C0C0;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 20);
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        letter-spacing: 2px;
+        transition: 0.2s;
+    }
+    
+    .btn:hover {
+        color: #fff;
+        border: 2px outset rgba(0, 0, 0, 0.9);
+        background: rgba(0, 0, 0, 0.9);
+        transform: scale(1.1);
+        transition: 0.2s;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 20);
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        letter-spacing: 2px;
+    }
+    /*section 2*/
+    
+    .content-section-a {
+        padding: 50px 0;
+        background-color: #db316d;
+        /*background: url('https://media.istockphoto.com/photos/dark-blue-abstract-modern-background-picture-id531536686?k=6&m=531536686&s=612x612&w=0&h=yIuoYSYMvi5CfSFJ6n6LFLucE8xqm8-9ftIyrySADb4=') no-repeat center center fixed;
+    */
+        background-size: cover;
+        height: 1100px;
+    }
+    
+    .bg-overlay2 {
+        margin-top: -50px;
+        background: rgba(255, 255, 255, 0.2);
+        height: 1300px;
+    }
+    /*self-taught*/
+    
+    .container .link {
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        font-size: 22px;
+    }
+    
+    .container .link-footer {
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        font-size: 32px;
+    }
+    
+    .container .link-footer:hover {
+        color: rgba(24, 39, 40, 0.8);
+        font-weight: bold;
+        font-size: 32px;
+    }
+    
+    .container .link:hover {
+        color: rgb(0, 0, 128);
+        font-weight: bold;
+        font-size: 22.5px;
+    }
+    
+    h2.section-heading {
+        margin-top: 100px;
+        font-size: 3em;
+        color: rgba(0, 0, 0, 0.9);
+    }
+    /*text*/
+    
+    .content-section-a p {
+        font-size: 22px;
+        font-weight: bold;
+        color: #000;
+    }
+    
+    .content-section-a p a {
+        color: silver;
+        font-weight: bold;
+    }
+    /*profile picture*/
+    
+    .img-circle {
+        margin-top: 150px;
+        border: 1px outset rgba(255, 255, 255, 0.3);
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    }
+    /* Portfolio section*/
+    
+    section {
+        color: green;
+        background-color: #65cde3;
+        /* background: no-repeat center center fixed; */
+        background-size: cover;
+    }
+    
+    #below-section {
+        color: #000;
+    }
+    
+    #small-text {
+        color: white;
+    }
+    /*.portfolio-item {
+  overflow: hidden;
+  padding: 7px;
+  color: white;
+  height: 308px;
+}*/
+    /*Portfolio items*/
+    
+    #portfolio .portfolio-item {
+        margin: 0 0 15px;
+        right: 0;
+        border: 1px outset rgba(255, 255, 255, 0.6);
+    }
+    
+    #portfolio .portfolio-item:hover {
+        transition: 0.5s;
+        box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.9);
+    }
+    
+    #portfolio .portfolio-item .portfolio-link {
+        display: block;
+        position: relative;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    #portfolio .portfolio-item .portfolio-link .portfolio-hover {
+        background: rgba(0, 0, 0, .7);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all ease .5s;
+        -webkit-transition: all ease .5s;
+        -moz-transition: all ease .5s,
+    }
+    
+    #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+        opacity: 1;
+    }
+    
+    #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+        position: absolute;
+        width: 100%;
+        height: 20px;
+        font-size: 20px;
+        text-align: center;
+        top: 50%;
+        margin-top: -12px;
+        color: #fff;
+    }
+    
+    #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+        margin-top: -12px;
+    }
+    
+    #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+    #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+        margin: 0;
+    }
+    
+    #portfolio .portfolio-item .portfolio-caption {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        padding: 25px;
+    }
+    
+    #portfolio .portfolio-item .portfolio-caption h4 {
+        color: #fff;
+        text-transform: none;
+        margin: 0;
+    }
+    
+    #portfolio .portfolio-item .portfolio-caption p {
+        font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-style: italic;
+        font-size: 13px;
+        margin: 0;
+    }
+    
+    #portfolio * {
+        z-index: 2;
+    }
+    
+    #contact {
+        text-align: center;
+        border-radius: 1vw;
+        width: 100%;
+        padding: 5vw;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #db316d;
+    }
+    
+    #contact>h3 {
+        color: white;
+        font-weight: 900;
+        letter-spacing: 2vw;
+    }
+    
+    #contact>span {
+        color: white;
+        font-size: 4vw;
+    }
+    
+    #contact>form>input {
+        height: 4vw;
+        width: 80%;
+        padding: 3vw;
+        border-radius: 1vw;
+        border: 0px;
+        color: rgb(0, 247, 255);
+    }
+    
+    #contact>form>input:focus {
+        background: rgb(0, 0, 0);
+        box-shadow: 0px 0px 10px rgb(143, 138, 138);
+    }
+    
+    #contact>form>textarea {
+        width: 80%;
+        padding: 3vw;
+        border-radius: 1vw;
+        background: white;
+        color: rgb(0, 72, 255);
+        border: 0;
+    }
+    
+    #contact>form>textarea:focus {
+        background: rgb(0, 0, 0);
+    }
+    
+    #contact>em {
+        text-align: left;
+        color: white;
+        font-size: inherit;
+    }
+    
+    #contact>form>button {
+        font-family: 'Montserrat', sans-serif;
+        border-radius: 1vw;
+        background: rgb(0, 247, 255);
+        font-weight: 900;
+        color: rgb(0, 0, 0);
+        border: 0px;
+        padding: 6vw;
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+    }
+    
+    #contact>form>button:hover {
+        color: white;
+        background: black;
+    }
+    
+    .clear {
+        clear: both;
+    }
+    
+    @media (min-width:767px) {
+        #portfolio .portfolio-item {
+            margin: 0 0 30px;
+        }
+    }
+    /*.col-md-4 {
+  overflow: hidden;
+  display: inline-block;
+  border: 1px outset rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 1%;
+  text-align: center;
+  box-shadow: 2px 3px 2px rgba(0,0,0,0.3);
+  text-shadow: 1px 2px 1px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+.col-md-4:hover {
+  transition: 0.5s;
+  box-shadow: 5px 10px 5px rgba(0,0,0,0.9);
+}*/
+    
+    .section-heading-spacer {
+        float: left;
+        width: 200px;
+        border-top: 3px solid #e7e7e7;
+    }
+    
+    .banner {
+        padding: 100px 0;
+        background-color: #ff005a;
+        /* background: url('https://preview.ibb.co/gJwbc6/MAIN_B4.jpg') no-repeat center center fixed;*/
+        background-size: cover;
+        height: 755px;
+    }
+    
+    .bg-overlay4 {
+        margin-top: -100px;
+        padding: 100px 0;
+        background: rgba(255, 255, 255, 0.3);
+        height: 755px;
+    }
+    
+    .banner ul {
+        margin-bottom: 0;
+    }
+    
+    .banner-social-buttons {
+        float: right;
+        margin-top: 0;
+    }
+    
+    @media(max-width:1199px) {
+        ul.banner-social-buttons {
+            float: left;
+            margin-top: 15px;
+        }
+    }
+    
+    ul.banner-social-buttons>li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+    
+    ul.banner-social-buttons>li:last-child {
+        margin-bottom: 0;
+    }
+    
+    h2.connect {
+        margin: 0;
+        color: rgba(0, 0, 0, 0.9);
+    }
+    
+    footer {
+        padding: 50px 0;
+        background: rgba(192, 192, 192, 0.9);
+    }
+    
+    p.copyright {
+        margin: 15px 0 0;
+    }
+</style>
+
+<head>
+    <title>Vaibhav's Web Design Studio</title>
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav">Vaibhav soni</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="home"></a>
+    <div class="intro-header">
+        <div class="bg-overlay">
+            <div class="container">
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="intro-message">
+                            <h1>Proud Indian </h1>
+                            <h3>Stay young Stay Cool </h3>
+                            <hr class="intro-divider">
+                            <ul class="list-inline intro-social-buttons">
+                                <li>
+                                    <a href=https://www.instagram.com/vaibhav.css/ target="_blank" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">|Instagram|</span></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/vaibhav.soni.3133" target="_blank" class="btn btn-default btn-lg "><i class="fa fa-facebook fa-fw"></i> <span class="network-name">|Facebook|</span></a>
+                                </li>
+                                <!-- <li>
+                                 <a href="https://www.linkedin.com/in/" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                            </li>
+-->
+                                <li>
+                                    <a href="https://www.freecodecamp.org/fccc563db1e-2cb6-41a9-abe8-eda74dd20fe0" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-free-code-camp fa-fw"></i> <span class="network-name">|freeCodeCamp|</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.container -->
+        </div>
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+
+    <a name="about"></a>
+    <div class="content-section-a">
+        <div class="bg-overlay2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-sm-6">
+
+                        <div class="clearfix"></div>
+                        <h1 class="section-heading" style="color: #483d8b; "> Web Design Studio.</h1>
+                        </br>
+                        <p class="lead" style="color: black">I'm a web designer, Knows About UX and UI Improvemet, Lives in India.</br>
+                            I'm pursuing my UG in Mechanical engineering from BVB CET situated in Hubli,Karnataka. I am learning to code since its my dream to be a good programmer.</br>
+                            My passion is to use technology based solutions, to help solve real world challenges.</br>
+                            Competences:</br>
+                            Languages and Frameworks:</br>
+                            Javascript(Basic only), C, HTML5, CSS3, jQuery, Bootstrap</br>
+                            Tools and expertise:</br>
+                            Arduino, Solid works,3D designing from AutoCAD, Photoshop,Engineeering Exploration...and much more under going..since I am a student I have to look after my academics too.
+                        </p>
+                    </div>
+                    <div class="col-lg-5 col-lg-offset-2 col-sm-6 collapse navbar-collapse">
+                        <a href="http://www.imageno.com/op7njzuojjk5pic.html" target="_blank"><img class="img-circle img-responsive" src="http://www.imageno.com/thumbs/20171004/op7njzuojjk5.jpg" alt="Vaibhav soni"></a>
+                        <a href="http://www.imageno.com/stxmax3yba81pic.html" target="_blank"><img class="img-circle img-responsive" src="http://www.imageno.com/thumbs/20171004/stxmax3yba81.jpg" border="0" alt="My college"></a>
+
+                    </div>
+
+                </div>
+                <!-- /.container -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Grid Section -->
+    <a name="portfolio"></a>
+    <section id="portfolio" class="bg-light-gray bounds">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="section-heading">My Portfolio.</h2>
+                        <h3 id="below-section" class="section-subheading text-muted" style="color: white ">Below you'll find some of my recent work.</h3>
+                </div>
+            </div>
+            <!-- Portfolio img1 -->
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="white-hat-vaibhs.github.io/tributepage.html" target="_blank" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa  fa-flag fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT4wrfRIsMfPE8v6qtPZeXVk_sbHXU9VblnvFOwux_5Lf-iiVY" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>A tribute page</h4>
+                        <p id="small-text" class="text-muted">Bhagat singh</p>
+                    </div>
+                </div>
+                <!-- End of Portfolio img1 -->
+
+                <!-- Portfolio img2 -->
+                <div class="col-md-4 col-sm-6 portfolio-item portfolio2">
+                    <a href="file:///C:/Users/ACER/Desktop/VIMP/Website/index.html" class="portfolio-link" target="_blank" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa  fa-birthday-cake fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="https://i.ytimg.com/vi/6f9uKOzN2kE/maxresdefault.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Animated Website</h4>
+                        <p id="small-text" class="text-muted">For Pleiades</p>
+                    </div>
+                </div>
+                <!-- End of Portfolio img2 -->
+
+                <!-- Portfolio img3 -->
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="white-hat-vaibhs.github.io/1.html" target="_blank" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa  fa-plug fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/how-to/photoshop-cc_297x176.jpg" class="img-responsive" alt="Photoshop">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Edited pictures</h4>
+                        <p id="small-text" class="text-muted">Begginer level's</p>
+                    </div>
+                </div>
+
+                <!-- End of Portfolio img3 -->
+                <!-- End of Vaibhav soni's Portfolio -->
+
+            </div>
+        </div>
+    </section>
+
+    <a name="contact"></a>
+    <div class="banner">
+        <div class="bg-overlay4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 class="connect">Contact me at <a class="link-footer" target="_blank" href="https://www.facebook.com/Vaibhav-soni-1966032027010281/">Facebook page.</a> (Will Update soon)</h2>
+                    </div>
+                    </br>
+                    <div class="col-lg-6">
+                        <ul class="list-inline banner-social-buttons">
+                            <li>
+                                <a href=https://www.instagram.com/vaibhav.css/ target="_blank" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">|Instagram|</span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/vaibhav.soni.3133" target="_blank" class="btn btn-default btn-lg "><i class="fa fa-facebook fa-fw"></i> <span class="network-name">|Facebook|</span></a>
+                                <!-- <li>
+                                 <a href="https://www.linkedin.com/in/" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                            </li>
+-->
+                                <li>
+                                    <a href="https://www.freecodecamp.org/fccc563db1e-2cb6-41a9-abe8-eda74dd20fe0" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-free-code-camp fa-fw"></i> <span class="network-name">|freeCodeCamp|</span></a>
+                                </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.container -->
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- /.banner -->
+
+    <div id="contact">
+        <a name="#contact"></a>
+        <span>CONTACT</span>
+        <p class="clear"><br></p>
+        <form action="" method="POST">
+            <input type="text" name="userfname" placeholder="Your Nickname *" required><br><br>
+            <input type="email" name="useremail" placeholder="Your Best Email *" required><br><br>
+            <input type="website" name="userwebsite" placeholder="Your Website(Optional)"><br><br>
+            <input type="number" name="userphone" placeholder="Your Phone(Optional)"><br><br>
+            <textarea name="usermessage" rows="10" placeholder="Message for me *" required></textarea><br><br>
+            <button>Say Hi!</button>
+        </form>
+        <p class="clear"><br></p>
+        <p class="clear"><br></p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                        <a href="https://madewithlove.org.in" target="_blank">Made with <span style="color: #e74c3c">&hearts;</span> in India</a>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; Vaibhav soni 2017. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
